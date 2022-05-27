@@ -105,6 +105,9 @@ class MultiSelectField extends ListboxField
 
                 $theRest = $theRest->map('ID', $titleField)->toArray();
 
+                // Sort them
+                asort($theRest);
+
                 // ... we then add the remaining items in whatever order they come
                 $dataSource = $dataSource + $theRest;
             }
